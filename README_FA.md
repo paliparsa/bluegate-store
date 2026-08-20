@@ -119,3 +119,6 @@ Premium:
 
 ## نسخه Storefront v5
 این نسخه فقط رابط کاربری سمت مشتری را بازطراحی می‌کند و دیتابیس/Admin قبلی را تغییر نمی‌دهد. برای آپدیت GitHub کافی است فایل‌های نسخه جدید را جایگزین و Commit کنید.
+
+
+Storefront v6: visual/conversion redesign only. No database migration required.
