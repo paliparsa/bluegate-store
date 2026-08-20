@@ -1,0 +1,9 @@
+BlueGate Storefront v7
+- Premium detail polish
+- Richer VPN cards
+- Premium monthly equivalent and benefit hierarchy
+- Stars receive summary
+- Smart header scroll state
+- Single-open FAQ
+- Checkout progress polish
+- Accessibility/focus and reduced-motion friendly

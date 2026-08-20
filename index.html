@@ -39,12 +39,12 @@
         <div class="hero-eyebrow"><span class="pulse-dot"></span><span>BLUEGATE DIGITAL STORE</span><b>خرید سریع • پشتیبانی مستقیم</b></div>
         <h1 id="heroTitle">سرویس‌های دیجیتال، ساده و سریع</h1>
         <p id="heroText">VPN، تلگرام استارز و تلگرام پرمیوم با قیمت شفاف و سفارش مستقیم از پشتیبانی.</p>
-        <div class="hero-actions"><a class="btn primary xl" href="#products">انتخاب سرویس</a><a id="heroSupport" class="btn ghost xl" target="_blank" rel="noopener">گفتگو با پشتیبانی</a></div>
+        <div class="hero-actions"><a class="btn primary xl hero-primary" href="#products"><span>مشاهده سرویس‌ها</span><b>←</b></a><a id="heroSupport" class="btn ghost xl" target="_blank" rel="noopener">گفتگو با پشتیبانی</a></div>
         <div class="hero-trust"><span><i>✓</i> قیمت شفاف</span><span><i>✓</i> سفارش سریع</span><span><i>✓</i> پشتیبانی مستقیم</span></div><div class="hero-microcopy"><span>بدون فرم‌های طولانی</span><i></i><span>انتخاب → بررسی → ارسال سفارش</span></div>
       </div>
       <div class="hero-visual" aria-hidden="true">
         <div class="brand-orbit"></div>
-        <div class="brand-stage"><img src="assets/logo-mark.png" alt=""><div class="brand-stage-copy"><span>BLUEGATE</span><strong>Digital Services</strong><small>VPN • Stars • Premium</small></div></div>
+        <div class="brand-stage"><img src="assets/logo-mark.png" alt=""><div class="brand-stage-copy"><span>BLUEGATE</span><strong>Digital Services</strong><small>VPN • Stars • Premium</small></div><span class="brand-live-badge"><i></i> STORE ONLINE</span></div>
         <div class="floating-card fc-one"><span>🛡️</span><div><small>BluePing</small><strong>VPN</strong><em>پایدار و منعطف</em></div></div>
         <div class="floating-card fc-two"><span>⭐</span><div><small>Telegram</small><strong>Stars</strong><em>تعداد دلخواه</em></div></div>
         <div class="floating-card fc-three"><span>✈️</span><div><small>Telegram</small><strong>Premium</strong><em>۳ تا ۱۲ ماهه</em></div></div>
@@ -92,6 +92,7 @@
           <div class="star-amount"><button id="starsMinus" type="button" aria-label="کاهش">−</button><label><input id="starsInput" type="number"><span>Stars</span></label><button id="starsPlus" type="button" aria-label="افزایش">+</button></div>
           <div class="slider-shell"><input id="starsSlider" class="range" type="range"><div class="range-labels"><span id="starsMin">—</span><span id="starsMax">—</span></div></div>
           <div id="starsPresets" class="presets"></div><div class="config-hint"><span>✦</span><p>با تغییر تعداد، قیمت نهایی و معادل USDT / TRX / TON همان لحظه به‌روزرسانی می‌شود.</p></div>
+          <div class="receive-summary"><div><span>مقدار دریافتی</span><strong><b id="starsReceive">—</b> Stars</strong></div><div><span>حداقل سفارش</span><strong><b id="starsMinimum">—</b> Stars</strong></div></div>
           <div class="primary-price-card"><span>قیمت نهایی</span><div class="hero-price"><strong id="starsToman">—</strong><small>تومان</small></div><div class="secondary-currencies"><span><b id="starsUsdt">—</b> USDT</span><span><b id="starsTrx">—</b> TRX</span><span><b id="starsTon">—</b> TON</span></div></div>
           <button id="starsBuy" class="btn primary xl full purchase-cta" type="button"><span>ثبت سفارش Stars</span><b>←</b></button><div class="purchase-reassurance centered"><span>✓ بررسی سفارش قبل از ارسال</span><span>✓ اتصال مستقیم به تلگرام</span></div>
         </div>
@@ -124,7 +125,7 @@
     <div class="modal-card">
       <div class="modal-grabber"></div>
       <button id="modalClose" class="modal-close" type="button" aria-label="بستن">×</button>
-      <div class="checkout-hero"><div id="checkoutProductIcon" class="checkout-product-icon">◆</div><div class="checkout-title"><span class="kicker">ORDER SUMMARY</span><h3 id="checkoutTitle">سفارش شما</h3><p>جزئیات را بررسی کن و بعد سفارش را مستقیم برای پشتیبانی بفرست.</p></div></div>
+      <div class="checkout-progress" aria-hidden="true"><span class="done"></span><span class="active"></span><span></span></div><div class="checkout-hero"><div id="checkoutProductIcon" class="checkout-product-icon"><img src="assets/logo-mark.png" alt=""></div><div class="checkout-title"><span class="kicker">ORDER SUMMARY</span><h3 id="checkoutTitle">سفارش شما</h3><p>جزئیات را بررسی کن و بعد سفارش را مستقیم برای پشتیبانی بفرست.</p></div></div>
       <div class="receipt-id-row"><span>شماره سفارش</span><strong id="receiptId">—</strong></div>
       <div class="receipt-product-card"><div><span>محصول</span><strong id="receiptProduct">—</strong></div><div><span>انتخاب</span><strong id="receiptVariant">—</strong></div></div>
       <div class="receipt-body">
