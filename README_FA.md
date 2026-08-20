@@ -115,3 +115,7 @@ Premium:
 - برای نرخ TON بهتر است Edge Function دوباره Deploy شود: `npx supabase functions deploy market-rates --no-verify-jwt`
 - دیتابیس جدید یا Migration لازم نیست.
 - پنل Admin حالا اگر یک جدول یا Policy مشکل داشته باشد، کامل سفید نمی‌شود و نام بخش مشکل‌دار را نمایش می‌دهد.
+
+
+## نسخه Storefront v5
+این نسخه فقط رابط کاربری سمت مشتری را بازطراحی می‌کند و دیتابیس/Admin قبلی را تغییر نمی‌دهد. برای آپدیت GitHub کافی است فایل‌های نسخه جدید را جایگزین و Commit کنید.
