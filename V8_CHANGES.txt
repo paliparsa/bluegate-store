@@ -1,0 +1,16 @@
+BlueGate Storefront v8
+
+Focus: Order confirmation / checkout redesign
+- Branded 3-step confirmation flow
+- Animated ready state
+- Scope-aware product identity for VPN, Stars, Premium
+- Stronger final-price hierarchy
+- Collapsible discount code area
+- Savings callout after successful discount
+- Branded Order ID + quick copy
+- Product highlights and trust microcopy
+- Premium Telegram CTA with microinteraction
+- Mobile bottom-sheet refinements + sticky action zone
+- Cache bumped to bluegate-v8
+
+No database or schema changes.

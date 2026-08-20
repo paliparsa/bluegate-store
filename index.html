@@ -122,23 +122,73 @@
 
   <div id="checkoutModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
     <div class="modal-backdrop" data-close="1"></div>
-    <div class="modal-card">
+    <div class="modal-card checkout-card-v8">
       <div class="modal-grabber"></div>
       <button id="modalClose" class="modal-close" type="button" aria-label="بستن">×</button>
-      <div class="checkout-progress" aria-hidden="true"><span class="done"></span><span class="active"></span><span></span></div><div class="checkout-hero"><div id="checkoutProductIcon" class="checkout-product-icon"><img src="assets/logo-mark.png" alt=""></div><div class="checkout-title"><span class="kicker">ORDER SUMMARY</span><h3 id="checkoutTitle">سفارش شما</h3><p>جزئیات را بررسی کن و بعد سفارش را مستقیم برای پشتیبانی بفرست.</p></div></div>
-      <div class="receipt-id-row"><span>شماره سفارش</span><strong id="receiptId">—</strong></div>
-      <div class="receipt-product-card"><div><span>محصول</span><strong id="receiptProduct">—</strong></div><div><span>انتخاب</span><strong id="receiptVariant">—</strong></div></div>
-      <div class="receipt-body">
-        <div class="receipt-row"><span>قیمت</span><strong id="receiptSubtotal">—</strong></div>
-        <div id="discountRow" class="receipt-row hidden"><span>تخفیف</span><strong id="receiptDiscount">—</strong></div>
-        <div class="discount-box"><label>کد تخفیف<input id="discountInput" type="text" placeholder="مثلاً WELCOME10"></label><button id="discountApply" class="btn ghost small" type="button">اعمال</button></div>
-        <div id="discountMessage" class="discount-message"></div>
-        <div class="receipt-total"><span>مبلغ نهایی</span><div><strong id="receiptTotal">—</strong><small>تومان</small></div></div>
-        <div class="receipt-crypto"><span id="receiptUsdt">—</span><span id="receiptTrx">—</span><span id="receiptTon">—</span></div>
-        <div class="receipt-meta"><span>نرخ تتر: <b id="receiptRate">—</b></span><span id="receiptTime">—</span></div>
+
+      <div class="checkout-steps" aria-label="مراحل سفارش">
+        <div class="checkout-step done"><span>1</span><b>انتخاب</b></div>
+        <i></i>
+        <div class="checkout-step active"><span>2</span><b>تأیید سفارش</b></div>
+        <i></i>
+        <div class="checkout-step"><span>3</span><b>تلگرام</b></div>
       </div>
-      <div class="modal-actions"><button id="copyReceipt" class="btn ghost" type="button">کپی رسید</button><a id="sendTelegram" class="btn primary" target="_blank" rel="noopener">ارسال سفارش در تلگرام</a></div>
-      <div class="checkout-trust"><span>✓ مبلغ نهایی مشخص</span><span>✓ متن سفارش آماده</span><span>✓ ارسال مستقیم به پشتیبانی</span></div><p class="telegram-hint">با زدن دکمه، تلگرام با متن آماده سفارش باز می‌شود.</p>
+
+      <div class="checkout-success-head">
+        <div class="checkout-ready-icon" aria-hidden="true"><span>✓</span></div>
+        <div>
+          <span class="checkout-status-label">آماده ثبت سفارش</span>
+          <h3 id="checkoutTitle">یک قدم تا تکمیل سفارش</h3>
+          <p>جزئیات انتخابت را بررسی کن؛ بعد سفارش با متن آماده در تلگرام باز می‌شود.</p>
+        </div>
+      </div>
+
+      <section class="checkout-product-summary">
+        <div id="checkoutProductIcon" class="checkout-product-icon" aria-hidden="true"><img src="assets/logo-mark.png" alt=""></div>
+        <div class="checkout-product-copy">
+          <small>محصول انتخاب‌شده</small>
+          <strong id="receiptProduct">—</strong>
+          <span id="receiptVariant">—</span>
+        </div>
+        <div id="scopeBadge" class="scope-badge">BlueGate</div>
+      </section>
+
+      <div id="productHighlights" class="checkout-highlights"></div>
+
+      <section class="checkout-price-panel">
+        <div class="checkout-price-eyebrow">مبلغ نهایی</div>
+        <div class="checkout-grand-total"><strong id="receiptTotal">—</strong><span>تومان</span></div>
+        <div id="checkoutSaving" class="checkout-saving hidden"></div>
+        <div class="receipt-crypto"><span id="receiptUsdt">—</span><span id="receiptTrx">—</span><span id="receiptTon">—</span></div>
+      </section>
+
+      <section class="checkout-details-card">
+        <div class="checkout-detail-row"><span>قیمت پایه</span><strong id="receiptSubtotal">—</strong></div>
+        <div id="discountRow" class="checkout-detail-row discount-applied hidden"><span>تخفیف</span><strong id="receiptDiscount">—</strong></div>
+        <div class="checkout-detail-row order-id-line"><span>کد سفارش</span><div><strong id="receiptId">—</strong><button id="copyOrderId" type="button" class="mini-copy" aria-label="کپی کد سفارش">کپی</button></div></div>
+        <div class="checkout-detail-row subtle"><span>زمان ایجاد</span><strong id="receiptTime">—</strong></div>
+      </section>
+
+      <div class="discount-collapsible">
+        <button id="discountToggle" class="discount-toggle" type="button" aria-expanded="false"><span>کد تخفیف داری؟</span><b>＋</b></button>
+        <div id="discountPanel" class="discount-panel hidden">
+          <div class="discount-box"><label>کد تخفیف<input id="discountInput" type="text" placeholder="مثلاً WELCOME10" autocomplete="off"></label><button id="discountApply" class="btn ghost small" type="button">اعمال</button></div>
+          <div id="discountMessage" class="discount-message"></div>
+        </div>
+      </div>
+
+      <div class="checkout-trust-v8">
+        <div><span>✓</span><p><b>قیمت شفاف</b><small>مبلغ نهایی قبل از ارسال مشخص است</small></p></div>
+        <div><span>↗</span><p><b>متن آماده سفارش</b><small>نیازی به تایپ دوباره جزئیات نیست</small></p></div>
+        <div><span>⚡</span><p><b>ارسال مستقیم</b><small>سفارش مستقیم برای پشتیبانی باز می‌شود</small></p></div>
+      </div>
+
+      <div class="modal-actions checkout-actions-v8">
+        <button id="copyReceipt" class="btn ghost" type="button">کپی جزئیات سفارش</button>
+        <a id="sendTelegram" class="btn primary telegram-cta" target="_blank" rel="noopener"><span>ادامه و ارسال در تلگرام</span><b>↗</b></a>
+      </div>
+      <p class="telegram-hint">با زدن دکمه بالا، تلگرام با متن کامل سفارش باز می‌شود.</p>
+      <div class="receipt-rate-note">نرخ مرجع تتر هنگام ثبت: <b id="receiptRate">—</b></div>
     </div>
   </div>
 
