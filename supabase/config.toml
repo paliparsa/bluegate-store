@@ -1,0 +1,2 @@
+[functions.market-rates]
+verify_jwt = false
