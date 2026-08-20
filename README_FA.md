@@ -122,3 +122,7 @@ Premium:
 
 
 Storefront v6: visual/conversion redesign only. No database migration required.
+
+
+## Storefront v9
+بخش VPN شامل Active Plan Expansion، کم‌رنگ شدن پلن‌های دیگر، Best For، visual شبکه، package tiles، نشان صرفه‌جویی، خلاصه انتخاب و CTA بهبود یافته است.

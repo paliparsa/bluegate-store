@@ -79,10 +79,67 @@
       <div id="vpnPanel" class="product-panel active">
         <div class="panel-intro"><div><span class="kicker">BLUEPING VPN</span><h3>اول نوع سرویس رو انتخاب کن</h3><p>بعد فقط پکیج‌های همان پلن را می‌بینی؛ شلوغی کمتر، انتخاب سریع‌تر.</p></div><span class="step-badge">مرحله ۱ از ۲</span></div>
         <div id="vpnPlans" class="vpn-plan-picker"></div>
-        <div id="vpnPackageStage" class="vpn-package-stage hidden">
-          <div class="stage-head"><div><span class="eyebrow">پلن انتخاب‌شده</span><h4 id="vpnSelectedTitle">—</h4><p id="vpnSelectedSubtitle">—</p></div><button id="changeVpnPlan" class="btn ghost small" type="button">تغییر پلن</button></div>
+        <div id="vpnPackageStage" class="vpn-package-stage hidden" data-theme="blue">
+          <div class="vpn-stage-ambient" aria-hidden="true"></div>
+
+          <div class="vpn-stage-top">
+            <div class="stage-head">
+              <div class="stage-identity">
+                <div id="vpnSelectedIcon" class="stage-plan-icon">🛡️</div>
+                <div>
+                  <span class="eyebrow">پلن انتخاب‌شده</span>
+                  <h4 id="vpnSelectedTitle">—</h4>
+                  <p id="vpnSelectedSubtitle">—</p>
+                </div>
+              </div>
+              <button id="changeVpnPlan" class="btn ghost small" type="button">تغییر پلن</button>
+            </div>
+
+            <div class="vpn-stage-details">
+              <div class="vpn-best-for">
+                <span class="mini-label">مناسب برای</span>
+                <div id="vpnBestFor" class="best-for-list"></div>
+              </div>
+
+              <div class="vpn-network-visual" aria-hidden="true">
+                <span class="network-node n1"></span>
+                <span class="network-node n2"></span>
+                <span class="network-node n3"></span>
+                <span class="network-line l1"></span>
+                <span class="network-line l2"></span>
+                <div class="network-core">BG</div>
+              </div>
+
+              <div class="vpn-compare-hint">
+                <span class="mini-label">خلاصه انتخاب</span>
+                <strong id="vpnCompareHint">—</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="package-section-head">
+            <div>
+              <span class="eyebrow">مرحله ۲ از ۲</span>
+              <h5>حجم مناسب خودت رو انتخاب کن</h5>
+              <p>پکیج‌های بزرگ‌تر، در صورت داشتن قیمت بهتر به ازای هر گیگ، با برچسب صرفه‌جویی مشخص می‌شن.</p>
+            </div>
+            <span id="vpnPackageCount" class="package-count-chip">—</span>
+          </div>
+
           <div id="vpnPackageList" class="vpn-package-grid"></div>
-          <div id="vpnAction" class="selection-summary muted-selection"><div><span>یک پکیج انتخاب کن</span><strong id="vpnSelectionPrice">—</strong></div><button id="vpnBuy" class="btn primary" type="button" disabled>ادامه خرید</button></div><div class="purchase-reassurance"><span>✓ مبلغ قبل از ارسال مشخص است</span><span>✓ سفارش مستقیم برای پشتیبانی</span></div>
+
+          <div id="vpnAction" class="selection-summary vpn-selection-summary muted-selection">
+            <div class="selection-product">
+              <span>انتخاب شما</span>
+              <strong id="vpnSelectionLabel">یک پکیج انتخاب کن</strong>
+            </div>
+            <div class="selection-price-block">
+              <small>مبلغ نهایی</small>
+              <strong id="vpnSelectionPrice">—</strong>
+            </div>
+            <button id="vpnBuy" class="btn primary" type="button" disabled>انتخاب پکیج</button>
+          </div>
+          <div class="purchase-reassurance"><span>✓ مبلغ قبل از ارسال مشخص است</span><span>✓ سفارش مستقیم برای پشتیبانی</span></div>
         </div>
       </div>
 
